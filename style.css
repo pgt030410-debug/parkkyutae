@@ -38,7 +38,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* 가독성을 위한 어두운 오버레이와 씨범 이미지 (로컬) */
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-              url('cbum-background.jpg') center/cover no-repeat fixed;
+              url('https://fitnessvolt.com/wp-content/uploads/2020/09/chris-bumstead-3.jpg.webp') center/cover no-repeat fixed;
   background-color: #1a1a1a; 
   color: var(--text-color);
   display: flex;
