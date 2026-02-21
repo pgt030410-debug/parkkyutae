@@ -36,9 +36,8 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* 가독성을 위한 어두운 오버레이와 씨범 이미지 (로컬) */
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-              url('cbum-background.jpg') center/cover no-repeat fixed;
+  /* 세련된 그라데이션 배경 */
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   background-color: #1a1a1a; 
   color: var(--text-color);
   display: flex;
