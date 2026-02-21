@@ -36,10 +36,10 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://wallpapercave.com/wp/wp6658097.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  /* 가독성을 위한 어두운 오버레이와 씨범 이미지 (신뢰도 높은 링크) */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('https://i.pinimg.com/originals/9e/8e/31/9e8e3182846944b02518e938928c0397.jpg') center/cover no-repeat fixed;
+  background-color: #1a1a1a; 
   color: var(--text-color);
   display: flex;
   justify-content: center;
