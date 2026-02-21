@@ -36,7 +36,10 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://wallpapercave.com/wp/wp6658097.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: var(--text-color);
   display: flex;
   justify-content: center;
@@ -77,6 +80,9 @@ body {
 
 .container {
   background-color: var(--container-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.85); /* Default Light Mode transparency */
   padding: 40px;
   border-radius: 20px;
   box-shadow: var(--shadow);
@@ -84,6 +90,10 @@ body {
   width: 100%;
   max-width: 600px;
   animation: fadeIn 0.5s ease-out;
+}
+
+[data-theme='dark'] .container {
+  background-color: rgba(45, 45, 45, 0.85); /* Dark Mode transparency */
 }
 
 @keyframes fadeIn {

@@ -9,6 +9,7 @@ This project is a modern, responsive web application designed to recommend Lotto
 - **Color Coding:** Standard Korean Lotto colors (1-10 Yellow, 11-20 Blue, 21-30 Red, 31-40 Gray, 41-45 Green).
 - **History:** Displays the last 5 generated sets.
 - **Theme Support:** **Dark Mode and Light Mode** toggle with persistent storage.
+- **Background Image:** **Chris Bumstead (Cbum)** wallpaper with glassmorphism overlay for a premium look.
 - **Responsive Design:** Mobile and desktop optimized.
 
 ## Technical Details
