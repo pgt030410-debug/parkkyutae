@@ -4,6 +4,8 @@
 const generateBtn = document.getElementById('generate-btn');
 const displayArea = document.getElementById('lotto-display');
 const historyList = document.getElementById('history-list');
+const themeBtn = document.getElementById('theme-btn');
+const modeIcon = themeBtn.querySelector('.mode-icon');
 
 // Configuration
 const LOTTO_MAX = 45;
@@ -12,6 +14,29 @@ const MAX_HISTORY = 5;
 
 // State
 let history = [];
+
+// --- Theme Logic ---
+function initTheme() {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  updateThemeIcon(savedTheme);
+}
+
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateThemeIcon(newTheme);
+}
+
+function updateThemeIcon(theme) {
+  modeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+}
+
+themeBtn.addEventListener('click', toggleTheme);
+initTheme();
+// --------------------
 
 // Helper: Generate Random Number between min and max (inclusive)
 function getRandomInt(min, max) {
