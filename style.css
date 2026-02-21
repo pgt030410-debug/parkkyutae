@@ -1,1 +1,178 @@
-/* Add styles here */
+:root {
+  --ball-size: 60px;
+  --bg-color: #f0f2f5;
+  --container-bg: #ffffff;
+  --primary-color: #4CAF50;
+  --text-color: #333;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --ball-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), inset -2px -2px 10px rgba(0, 0, 0, 0.1);
+
+  /* Lotto Ball Colors (Korean Standard) */
+  --color-1-10: #fbc400;  /* Yellow */
+  --color-11-20: #69c8f2; /* Blue */
+  --color-21-30: #ff7272; /* Red */
+  --color-31-40: #aaaaaa; /* Gray */
+  --color-41-45: #b0d840; /* Green */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background-color: var(--container-bg);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.hero p {
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+.ball-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  min-height: var(--ball-size); /* Prevent layout jump */
+}
+
+.placeholder-text {
+  color: #bdc3c7;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.lotto-ball {
+  width: var(--ball-size);
+  height: var(--ball-size);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: #333; /* Default fallback */
+  box-shadow: var(--ball-shadow);
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+@keyframes popIn {
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Color Classes based on range */
+.ball-1-10 { background-color: var(--color-1-10); color: #333; }
+.ball-11-20 { background-color: var(--color-11-20); }
+.ball-21-30 { background-color: var(--color-21-30); }
+.ball-31-40 { background-color: var(--color-31-40); }
+.ball-41-45 { background-color: var(--color-41-45); color: #333; }
+
+
+.generate-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.generate-btn:active {
+  transform: translateY(1px);
+}
+
+.history-section {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.history-section h2 {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 10px;
+}
+
+#history-list {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.history-item {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ecf0f1;
+  font-size: 0.9rem;
+  color: #555;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar styling */
+#history-list::-webkit-scrollbar {
+  width: 6px;
+}
+#history-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+@media (max-width: 480px) {
+  :root {
+    --ball-size: 45px;
+  }
+  .container {
+    padding: 20px;
+  }
+}
