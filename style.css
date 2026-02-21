@@ -38,7 +38,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* 가독성을 위한 어두운 오버레이와 씨범 이미지 (신뢰도 높은 링크) */
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-              url('https://wallpapercave.com/wp/wp9503721.jpg') center/cover no-repeat fixed;
+              url('https://e1.pxfuel.com/desktop-wallpaper/863/730/desktop-wallpaper-chris-bumstead-cbum.jpg') center/cover no-repeat fixed;
   background-color: #1a1a1a; 
   color: var(--text-color);
   display: flex;
